@@ -53,8 +53,9 @@ double vet_norma2 (int n, double* v)
 int vet_iguais(int n, double* v, double* w, double tol) {
     for (int i = 0; i < n; ++i) {
         if (fabs(v[i] - w[i]) > tol) {
-            return -1; // Return -1 if elements are not equal within tolerance
+            return 0; // Return 0 if elements are not equal within tolerance
         }
     }
-    return 0; // Return 0 if all elements are equal within tolerance
+    return 1; // Return 1 if all elements are equal within tolerance
 }
+
